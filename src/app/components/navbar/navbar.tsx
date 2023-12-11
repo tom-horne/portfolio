@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { EllipsisVerticalIcon, XMarkIcon } from '@heroicons/react/20/solid';
 
 type NavBarProps = {
   title: string
@@ -40,6 +41,15 @@ const NavBar: React.FC<NavBarProps> = ({title}) => {
             <Link href="/university">University</Link>
           </li>
         </ul>
+
+        <div onClick={handleMenuIcon} className="flex md:hidden">
+          {menuIcon ?
+            ( <XMarkIcon className="h-6 w-6" /> )
+            :
+            ( <EllipsisVerticalIcon className="h-6 w-6" /> )
+          }
+        </div>
+        
 
       </nav>
     </header>
