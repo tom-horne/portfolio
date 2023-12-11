@@ -2,13 +2,8 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="p-4">
-      {/* <div className="max-w-fit p-4 bg-lime-600">
-        <Link href="/university">
-          <h1>click</h1>
-        </Link>
-      </div> */}
-      <div>
+    <main className="w-full mt-16 bg-slate-200 top-0 ">
+      <div className="bg-blue-300 flex justify-center mx-auto max-w-[1366px] h-16">
         <h1>Welcome to my Portfolio!</h1>
       </div>
     </main>

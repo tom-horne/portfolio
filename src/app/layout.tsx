@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavBar />
+        <NavBar title='tomhorne.co.uk' />
         {children}
       </body>
     </html>
