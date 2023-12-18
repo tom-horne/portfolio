@@ -21,16 +21,16 @@ const NavBar: React.FC<NavBarProps> = ({title}) => {
     <header className="w-full bg-red-900 top-0 ease-in duration-300 fixed left-0 z-10">
       <nav className="flex justify-between items-center p-4 h-16 max-w-[1366px] mx-auto">
 
-        <div>
+        <div className="flex justify-between">
           <Link href="/">
               <h2>TH</h2>
-              <h1 className="hidden md:flex text-white">{title}</h1>
             </Link>
+              <h1 className="pl-2 hidden md:flex text-white">{title}</h1>
         </div>
         
         <ul className="hidden md:flex gap-x-6 text-white">
           <li>
-            <Link href="/myprojects">Projects</Link> 
+            <Link href="/projects">Projects</Link> 
           </li>
 
           <li>
@@ -58,21 +58,23 @@ const NavBar: React.FC<NavBarProps> = ({title}) => {
           
           <div className="w-full">
             <ul className="text-white mx-2">
-
-              
                 <Link href="/myprojects">
                   <li onClick={handleMenuIcon} className="bg-purple-500 p-4 my-2 rounded-xl">
                     Projects
                   </li>
-                </Link> 
+                </Link>
 
-              <li onClick={handleMenuIcon} className="bg-purple-500 p-4 my-2 rounded-xl">
-                <Link href="/about">About</Link>
-              </li>
+                <Link href="/about">
+                  <li onClick={handleMenuIcon} className="bg-purple-500 p-4 my-2 rounded-xl">
+                    About
+                  </li>
+                </Link>
               
-              <li onClick={handleMenuIcon} className="bg-purple-500 p-4 my-2 rounded-xl">
-                <Link href="/university">University</Link>
-              </li>
+              <Link href="/university">
+                <li onClick={handleMenuIcon} className="bg-purple-500 p-4 my-2 rounded-xl">
+                  University
+                </li>
+              </Link>
             </ul>
           </div>
 

@@ -1,6 +1,8 @@
 import React from 'react'
+// import { getData } from '@/utils/getData'
 
-const About = () => {
+const About = async () => {
+  // await getData()
   return (
     <h1 className="mt-16">All about me!</h1>
   )
