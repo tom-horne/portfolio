@@ -22,21 +22,21 @@ const NavBar: React.FC<NavBarProps> = ({title}) => {
       <nav className="flex justify-between items-center p-4 h-16 max-w-[1366px] mx-auto">
 
         <div className="flex justify-between">
-          <Link href="/">
-              <h2>TH</h2>
+          <Link className="no-underline text-black" href="/">
+              <p>TH</p>
             </Link>
-              <h1 className="pl-2 hidden md:flex text-white">{title}</h1>
+              <p className="pl-2 hidden md:flex text-white">{title}</p>
         </div>
         
-        <ul className="hidden md:flex gap-x-6 text-white">
+        <ul className="hidden md:flex gap-x-6 list-none">
           <li>
-            <Link href="/projects">Projects</Link> 
+            <Link className="no-underline text-white" href="/projects">Projects</Link> 
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link className="no-underline text-white" href="/about">About</Link>
           </li>           
           <li>
-            <Link href="/university">University</Link>
+            <Link className="no-underline text-white" href="/university">University</Link>
           </li>
         </ul>
 

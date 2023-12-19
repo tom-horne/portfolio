@@ -7,14 +7,14 @@ type BlockBuilderProps = {
 }
 
 const BlockBuilder: React.FC<BlockBuilderProps> = ({ content }) => {
-    return content.map((component: any) => {
+    return content?.map((component: any) => {
         switch (component.__typename) {
             case "TextRecord":
-                return <Text title={component.title} text={component.text} />;
+                return <Text title={component.title} text={component.text} image={component.image}/>
             case "BannerRecord":
                 return <Banner title={component.title} description={component.description} image={component.image}/>
             default:
-                return <div>No components found</div>
+                return <div>No component found</div>
         }
     });
 }
