@@ -8,6 +8,29 @@ query Home {
         title
         text
       }
+      ... on HeaderRecord {
+        __typename
+        id
+        title
+        subtitle
+      }
+      ... on BannerRecord {
+        __typename
+        id
+        title
+        description
+        image {
+          responsiveImage(imgixParams: {fit: crop, w: "300", h: "300", auto: format}) {
+            sizes
+            src
+            width
+            height
+            alt
+            title
+            base64
+          }
+        }
+      }
     }
   }
 }
