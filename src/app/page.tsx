@@ -7,10 +7,6 @@ export default async function Home() {
 
 const data = await getData({ query: HOME_QUERY });
 
-console.log('====================================');
-console.log(data);
-console.log('====================================');
-
 return (
   <main className="w-full mt-16 top-0 ">
     {/* <div className="bg-blue-300 flex justify-center mx-auto max-w-[1366px] h-16">
