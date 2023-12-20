@@ -8,7 +8,7 @@ type CardAreaProps = {
 const CardArea: React.FC<CardAreaProps> = ({ cards }) => {
     return cards.map((card: any) => {
         return (
-            <div className="w-full mx-auto bg-pink-500">
+            <div key={card.id} className="w-full mx-auto bg-pink-500">
                 <div className="bg-blue-300 pt-4 mx-auto max-w-[1366px]">
                     <Card key={card.id} title={card.title} description={card.description} image={card.image} />
                 </div>
