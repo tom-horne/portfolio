@@ -2,13 +2,12 @@ import React from "react";
 import { Image as DatoImage } from "react-datocms";
 
 type CardProps = {
-    id: string,
     title: string,
     description: string,
     image?: any
 }
 
-const Card: React.FC<CardProps> = ({ id, title, description, image }) => {
+const Card: React.FC<CardProps> = ({ title, description, image }) => {
 
     console.log('====================================');
     console.log("IMAGE ",image);
