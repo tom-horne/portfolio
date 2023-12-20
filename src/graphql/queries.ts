@@ -19,7 +19,7 @@ query Home {
         title
         description
         image {
-          responsiveImage(imgixParams: {fit: crop, w: "500", h: "500", auto: format}) {
+          responsiveImage(imgixParams: {fit: crop, w: "300", h: "300", auto: format}) {
             sizes
             src
             width
@@ -27,6 +27,25 @@ query Home {
             alt
             title
             base64
+          }
+        }
+      }
+      ... on CardareaRecord {
+        __typename
+        id
+        cards {
+          title
+          description
+          image {
+            responsiveImage(imgixParams: {fit: crop, w: "300", h: "300", auto: format}) {
+              sizes
+              src
+              width
+              height
+              alt
+              title
+              base64
+            }
           }
         }
       }
