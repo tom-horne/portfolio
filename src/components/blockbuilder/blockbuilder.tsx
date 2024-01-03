@@ -30,6 +30,7 @@ const BlockBuilder: React.FC<BlockBuilderProps> = ({ content }) => {
       case "CardRecord":
         return (
           <Card
+            link={component.link}
             key={component.id}
             title={component.title}
             description={component.description}
