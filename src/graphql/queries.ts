@@ -36,6 +36,7 @@ query Home {
         cards {
           title
           description
+          link
           image {
             responsiveImage(imgixParams: {fit: crop, auto: format}) {
               sizes
