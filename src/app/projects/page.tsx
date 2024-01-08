@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import { getData } from "@/utils/getData";
+import { PROJECTSPAGE_QUERY } from "@/graphql/queries";
+import BlockBuilder from "@/components/blockbuilder";
 
-const Projects = () => {
+export default async function Projects() {
+  const data = await getData({ query: PROJECTSPAGE_QUERY });
+
   return (
-    <h1 className="mt-16">My projects</h1>
-  )
+    <main className="w-full mt-16 ">
+      <BlockBuilder content={data?.projectPage?.content} />
+    </main>
+  );
 }
-
-export default Projects

@@ -27,16 +27,16 @@ const BlockBuilder: React.FC<BlockBuilderProps> = ({ content }) => {
             image={component.image}
           />
         );
-      case "CardRecord":
-        return (
-          <Card
-            link={component.link}
-            key={component.id}
-            title={component.title}
-            description={component.description}
-            image={component.image}
-          />
-        );
+      // case "CardRecord":
+      //   return (
+      //     <Card
+      //       link={component.link}
+      //       key={component.id}
+      //       title={component.title}
+      //       description={component.description}
+      //       image={component.image}
+      //     />
+      //   );
       case "CardareaRecord":
         return <CardArea cards={component.cards} />;
       default:
