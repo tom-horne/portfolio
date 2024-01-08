@@ -6,12 +6,15 @@ type CardAreaProps = {
 };
 
 const CardArea: React.FC<CardAreaProps> = ({ cards }) => {
+  console.log("====================================");
+  console.log(cards);
+  console.log("====================================");
   return (
     <div className="w-full bg-pink-500">
       <div className="bg-blue-300 pt-4 mx-auto max-w-[1366px] grid md:grid-cols-2 grid-cols-1 gap-4">
         {cards.map((card: any) => (
           <Card
-            link={card.link}
+            link={card?.link?.slug}
             key={card.id}
             title={card.title}
             description={card.description}

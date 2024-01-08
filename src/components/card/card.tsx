@@ -3,7 +3,7 @@ import { Image as DatoImage } from "react-datocms";
 import Link from "next/link";
 
 type CardProps = {
-  link: string;
+  link?: string;
   title: string;
   description: string;
   image?: any;
@@ -11,7 +11,7 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ link, title, description, image }) => {
   return (
-    <Link href={link}>
+    <Link href={link ?? ""}>
       <div className="bg-slate-100 rounded-xl shadow-md max-w-md mx-auto overflow-hidden md:max-w-2xl">
         <div className="lg:flex">
           <div className="md:shrink">
