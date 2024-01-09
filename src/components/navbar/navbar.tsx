@@ -27,11 +27,6 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
 
         <ul className="hidden md:flex gap-x-6 list-none">
           <li>
-            <Link className="no-underline text-white" href="/projects">
-              Projects
-            </Link>
-          </li>
-          <li>
             <Link className="no-underline text-white" href="/about">
               About
             </Link>
@@ -39,6 +34,11 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
           <li>
             <Link className="no-underline text-white" href="/university">
               University
+            </Link>
+          </li>
+          <li>
+            <Link className="no-underline text-white" href="/projects">
+              Projects
             </Link>
           </li>
         </ul>
@@ -60,15 +60,6 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
         >
           <div className="w-full">
             <ul className="text-white mx-2">
-              <Link href="/myprojects">
-                <li
-                  onClick={handleMenuIcon}
-                  className="bg-purple-500 p-4 my-2 rounded-xl"
-                >
-                  Projects
-                </li>
-              </Link>
-
               <Link href="/about">
                 <li
                   onClick={handleMenuIcon}
@@ -84,6 +75,15 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
                   className="bg-purple-500 p-4 my-2 rounded-xl"
                 >
                   University
+                </li>
+              </Link>
+
+              <Link href="/myprojects">
+                <li
+                  onClick={handleMenuIcon}
+                  className="bg-purple-500 p-4 my-2 rounded-xl"
+                >
+                  Projects
                 </li>
               </Link>
             </ul>
