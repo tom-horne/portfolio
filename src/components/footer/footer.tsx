@@ -6,11 +6,11 @@ type FooterProps = {};
 const Footer: React.FC<FooterProps> = ({}) => {
   return (
     <footer>
-      <div className="bottom-0 w-full h-80 bg-purple-400">
+      <div className="bottom-0 h-80 bg-purple-400">
         <div>
           <h2 className="p-4 text-center">Foota</h2>
         </div>
-        <div className="bg-red-200 text-center w-full">
+        <div className="bg-red-200 text-center">
           <Link href="/">
             <h4>Home</h4>
           </Link>
