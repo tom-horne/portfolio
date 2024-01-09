@@ -1,8 +1,9 @@
 import React from "react";
 import Text from "../text";
 import Banner from "../banner";
-import Card from "../card";
+// import Card from "../card";
 import CardArea from "../cardarea";
+import Header from "../header";
 
 type BlockBuilderProps = {
   content: any;
@@ -11,6 +12,8 @@ type BlockBuilderProps = {
 const BlockBuilder: React.FC<BlockBuilderProps> = ({ content }) => {
   return content?.map((component: any) => {
     switch (component.__typename) {
+      case "HeaderRecord":
+        return <Header title={component.title} subtitle={component.subtitle} />;
       case "TextRecord":
         return (
           <Text
