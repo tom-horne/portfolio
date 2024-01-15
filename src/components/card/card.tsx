@@ -11,8 +11,8 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ link, title, description, image }) => {
   return (
-    <Link href={link ?? ""}>
-      <div className="bg-slate-100 rounded-xl shadow-md max-w-md mx-auto overflow-hidden md:max-w-2xl">
+    <Link href={link ?? ""} className="no-underline">
+      <div className="bg-slate-50 rounded-xl  shadow-md max-w-md mx-auto overflow-hidden md:max-w-2xl">
         <div className="lg:flex">
           <div className="md:shrink">
             {image && (
@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({ link, title, description, image }) => {
           </div>
           <div className="p-8 text-xs">
             <h3>{title}</h3>
-            <p>{description}</p>
+            <p className="text-black">{description}</p>
           </div>
         </div>
       </div>

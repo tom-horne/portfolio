@@ -16,28 +16,28 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
   };
 
   return (
-    <header className="w-full bg-red-900 top-0 ease-in duration-300 fixed left-0 z-10">
-      <nav className="flex justify-between items-center p-4 h-16 max-w-[1366px] mx-auto">
+    <header className="w-full bg-slate-100 border-b-8 border-black shadow-inner top-0 ease-in duration-300 fixed left-0 z-10">
+      <nav className="flex justify-between items-center p-4 h-16 max-w-[960px] mx-auto">
         <div className="flex justify-between">
           <Link className="no-underline text-black" href="/">
             <p>TH</p>
           </Link>
-          <p className="pl-2 hidden md:flex text-white">{title}</p>
+          <p className="pl-2 hidden md:flex text-black">{title}</p>
         </div>
 
         <ul className="hidden md:flex gap-x-6 list-none">
           <li>
-            <Link className="no-underline text-white" href="/about">
+            <Link className="no-underline text-black" href="/about">
               About
             </Link>
           </li>
           <li>
-            <Link className="no-underline text-white" href="/university">
+            <Link className="no-underline text-black" href="/university">
               University
             </Link>
           </li>
           <li>
-            <Link className="no-underline text-white" href="/projects">
+            <Link className="no-underline text-black" href="/projects">
               Projects
             </Link>
           </li>

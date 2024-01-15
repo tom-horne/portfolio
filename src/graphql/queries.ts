@@ -19,7 +19,7 @@ query Home {
         title
         description
         image {
-          responsiveImage(imgixParams: {fit: crop, w: "300", h: "300", auto: format}) {
+          responsiveImage(imgixParams: {fit: crop, auto: format}) {
             sizes
             src
             width
@@ -48,6 +48,14 @@ query Home {
               base64
             }
           }
+        }
+      }
+      ... on ButtonRecord {
+        id
+        link
+        title
+        colour {
+          cssRgb
         }
       }
     }
