@@ -6,7 +6,7 @@ export default async function Home() {
   const data = await getData({ query: HOME_QUERY });
 
   return (
-    <main className="w-full mt-16 ">
+    <main className="w-full mt-20">
       <BlockBuilder content={data?.home?.content} />
     </main>
   );
