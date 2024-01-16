@@ -72,7 +72,7 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
                 </li>
               </Link>
               <hr />
-              <Link href="/myprojects" className="text-black no-underline">
+              <Link href="/projects" className="text-black no-underline">
                 <li onClick={handleMenuIcon} className="p-4 my-2 rounded-xl">
                   Projects
                 </li>

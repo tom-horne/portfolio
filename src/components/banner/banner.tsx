@@ -23,7 +23,7 @@ const Banner: React.FC<BannerProps> = ({
             <h2 className="mt-2">{title}</h2>
           </div>
           <div className="mt-2">
-            <p>{description}</p>
+            <div dangerouslySetInnerHTML={{ __html: description }} />
           </div>
           <div className="block my-5">
             {buttons?.map((button: any) => (
@@ -42,7 +42,7 @@ const Banner: React.FC<BannerProps> = ({
             <DatoImage
               data={image.responsiveImage}
               objectFit="cover"
-              className="rounded-xl md:block md:mx-auto"
+              className="rounded-xl block mx-auto"
             />
           </div>
         )}
