@@ -4,6 +4,7 @@ import Banner from "../banner";
 // import Card from "../card";
 import CardArea from "../cardarea";
 import Header from "../header";
+import Button from "../button";
 
 type BlockBuilderProps = {
   content: any;
@@ -28,6 +29,7 @@ const BlockBuilder: React.FC<BlockBuilderProps> = ({ content }) => {
             title={component.title}
             description={component.description}
             image={component.image}
+            buttons={component.buttons}
           />
         );
       // case "CardRecord":
@@ -42,6 +44,14 @@ const BlockBuilder: React.FC<BlockBuilderProps> = ({ content }) => {
       //   );
       case "CardareaRecord":
         return <CardArea cards={component.cards} />;
+      case "ButtonRecord":
+        return (
+          <Button
+            title={component.title}
+            link={component.link.slug}
+            colour={component.colour}
+          />
+        );
       default:
         return <div>No component found</div>;
     }

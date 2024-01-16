@@ -18,8 +18,32 @@ query Home {
         id
         title
         description
+        buttons {
+          title
+          colour {
+            cssRgb
+          }
+            link {
+              ... on ProjectRecord {
+                id
+                slug
+              }
+              ... on ProjectPageRecord {
+                id
+                slug
+              }
+              ... on HomeRecord {
+                id
+                slug
+              }
+              ... on AboutRecord {
+                id
+                slug
+              }
+          }
+        }
         image {
-          responsiveImage(imgixParams: {fit: crop, auto: format}) {
+          responsiveImage(imgixParams: {fit: crop, w: "500", h: "500", auto: format}) {
             sizes
             src
             width
@@ -51,8 +75,33 @@ query Home {
         }
       }
       ... on ButtonRecord {
+        __typename
         id
-        link
+        colour {
+          cssRgb
+        }
+        link {
+          ... on AboutRecord {
+            id
+            slug
+          }
+          ... on HomeRecord {
+            id
+            slug
+          }
+          ... on ProjectPageRecord {
+            id
+            slug
+          }
+          ... on ProjectRecord {
+            id
+            slug
+          }
+          ... on UniversityRecord {
+            id
+            slug
+          }
+        }
         title
         colour {
           cssRgb
@@ -86,7 +135,7 @@ query ProjectPage {
         title
         description
         image {
-          responsiveImage(imgixParams: {fit: crop, auto: format}) {
+          responsiveImage(imgixParams: {fit: crop, w: "500", h: "500", auto: format}) {
             sizes
             src
             width
@@ -162,7 +211,7 @@ query Project($slug: String) {
         title
         description
         image {
-          responsiveImage(imgixParams: {fit: crop, auto: format}) {
+          responsiveImage(imgixParams: {fit: crop, w: "500", h: "500", auto: format}) {
             sizes
             src
             width
@@ -218,7 +267,7 @@ query University {
         title
         description
         image {
-          responsiveImage(imgixParams: {fit: crop, w: "300", h: "300", auto: format}) {
+          responsiveImage(imgixParams: {fit: crop, w: "500", h: "500", auto: format}) {
             sizes
             src
             width
@@ -274,8 +323,32 @@ query About {
         id
         title
         description
+        buttons {
+          title
+          colour {
+            cssRgb
+          }
+            link {
+              ... on ProjectRecord {
+                id
+                slug
+              }
+              ... on ProjectPageRecord {
+                id
+                slug
+              }
+              ... on HomeRecord {
+                id
+                slug
+              }
+              ... on AboutRecord {
+                id
+                slug
+              }
+          }
+        }
         image {
-          responsiveImage(imgixParams: {fit: crop, w: "300", h: "300", auto: format}) {
+          responsiveImage(imgixParams: {fit: crop, w: "500", h: "500", auto: format}) {
             sizes
             src
             width
