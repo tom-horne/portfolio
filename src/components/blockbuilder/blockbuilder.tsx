@@ -50,6 +50,7 @@ const BlockBuilder: React.FC<BlockBuilderProps> = ({ content }) => {
             title={component.title}
             link={component.link.slug}
             colour={component.colour}
+            key={component.id}
           />
         );
       default:

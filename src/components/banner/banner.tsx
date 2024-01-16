@@ -31,6 +31,7 @@ const Banner: React.FC<BannerProps> = ({
                 title={button.title}
                 colour={button.colour}
                 link={button.link.slug}
+                key={button.id}
               />
             ))}
           </div>
