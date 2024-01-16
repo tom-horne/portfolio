@@ -54,35 +54,26 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
         <div
           className={
             menuIcon
-              ? "md:hidden absolute w-60 h-60 top-16 right-0 flex justify-center items-center bg-red-900 ease-in duration-300 rounded-b-lg"
-              : "md:hidden absolute w-60 h-60 top-[-350%] right-0 flex justify-center items-center bg-red-900 ease-in duration-300 rounded-b-lg"
+              ? "md:hidden absolute w-60 h-60 top-16 right-0 flex justify-center items-center bg-slate-100 ease-in duration-300 rounded-b-lg"
+              : "md:hidden absolute w-60 h-60 top-[-380%] right-0 flex justify-center items-center bg-slate-100 ease-in duration-300 rounded-b-lg"
           }
         >
-          <div className="w-full">
-            <ul className="text-white mx-2">
-              <Link href="/about">
-                <li
-                  onClick={handleMenuIcon}
-                  className="bg-purple-500 p-4 my-2 rounded-xl"
-                >
+          <div className="mr-10 w-full">
+            <ul className="list-none text-center">
+              <Link href="/about" className="text-black no-underline">
+                <li onClick={handleMenuIcon} className="p-4 my-2 rounded-xl">
                   About
                 </li>
               </Link>
-
-              <Link href="/university">
-                <li
-                  onClick={handleMenuIcon}
-                  className="bg-purple-500 p-4 my-2 rounded-xl"
-                >
+              <hr />
+              <Link href="/university" className="text-black no-underline">
+                <li onClick={handleMenuIcon} className="p-4 my-2 rounded-xl">
                   University
                 </li>
               </Link>
-
-              <Link href="/myprojects">
-                <li
-                  onClick={handleMenuIcon}
-                  className="bg-purple-500 p-4 my-2 rounded-xl"
-                >
+              <hr />
+              <Link href="/myprojects" className="text-black no-underline">
+                <li onClick={handleMenuIcon} className="p-4 my-2 rounded-xl">
                   Projects
                 </li>
               </Link>
