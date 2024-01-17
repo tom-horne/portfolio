@@ -12,7 +12,7 @@ type CardProps = {
 const Card: React.FC<CardProps> = ({ link, title, description, image }) => {
   return (
     <Link href={link ?? ""} className="no-underline">
-      <div className="bg-slate-50 rounded-xl  shadow-md max-w-md mx-auto overflow-hidden md:max-w-2xl">
+      <div className="bg-white rounded-xl border-[0.5px] border-solid border-slate-300 shadow-md max-w-md mx-auto overflow-hidden md:max-w-2xl">
         <div className="lg:flex">
           <div className="md:shrink">
             {image && (

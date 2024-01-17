@@ -13,12 +13,12 @@ const Button: React.FC<ButtonProps> = ({ title, colour, link }) => {
   return (
     <Link href={link} className="no-underline text-white">
       <button
-        style={{
-          backgroundColor: colour?.cssRgb,
-        }}
-        className="text-white rounded-xl w-auto px-4 border-none cursor-pointer"
+        // style={{
+        //   backgroundColor: colour?.cssRgb,
+        // }}
+        className="rounded-xl w-auto px-4 border-none cursor-pointer bg-primary hover:bg-primaryhover"
       >
-        <p>{title}</p>
+        <p className="text-white bo">{title}</p>
       </button>
     </Link>
   );

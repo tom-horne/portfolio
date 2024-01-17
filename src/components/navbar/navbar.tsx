@@ -16,31 +16,44 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
   };
 
   return (
-    <header className="w-full bg-slate-100 border-b-8 border-black shadow-inner top-0 ease-in duration-300 fixed left-0 z-10">
-      <nav className="flex justify-between items-center p-4 h-16 max-w-[960px] mx-auto">
+    <header className="w-full bg-slate-50 border-0 border-b-[0.5px] border-solid border-slate-300 shadow-inner top-0 ease-in duration-300 fixed left-0 z-10">
+      <nav className="flex justify-between items-center h-16 max-w-[960px] mx-auto">
         <div className="flex justify-between">
-          <Link className="no-underline text-black" href="/">
-            <p>TH</p>
+          <Link className="no-underline text-white" href="/">
+            <h3 className="p-1 bg-primary hover:bg-primaryhover rounded-md">
+              TH
+            </h3>
           </Link>
+        </div>
+        <div className="mr-auto">
           <p className="pl-2 hidden md:flex text-black">{title}</p>
         </div>
 
-        <ul className="hidden md:flex gap-x-6 list-none">
-          <li>
-            <Link className="no-underline text-black" href="/about">
+        <ul className="hidden md:flex gap-x-6 list-none my-0">
+          <Link
+            className="no-underline text-black hover:text-blue-400"
+            href="/about"
+          >
+            <li className="h-16 hover:border-b hover:border-0 hover:border-solid active:border-b active:border-0 active:border-solid">
               About
-            </Link>
-          </li>
-          <li>
-            <Link className="no-underline text-black" href="/university">
+            </li>
+          </Link>
+          <Link
+            className="no-underline text-black hover:text-blue-400"
+            href="/university"
+          >
+            <li className="h-16 hover:border-b hover:border-0 hover:border-solid">
               University
-            </Link>
-          </li>
-          <li>
-            <Link className="no-underline text-black" href="/projects">
+            </li>
+          </Link>
+          <Link
+            className="no-underline text-black hover:text-blue-400"
+            href="/projects"
+          >
+            <li className="h-16 hover:border-b hover:border-0 hover:border-solid">
               Projects
-            </Link>
-          </li>
+            </li>
+          </Link>
         </ul>
 
         <div onClick={handleMenuIcon} className="flex md:hidden">
