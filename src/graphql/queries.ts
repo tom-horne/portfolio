@@ -62,7 +62,7 @@ query Home {
           description
           link
           image {
-            responsiveImage(imgixParams: {fit: crop, auto: format}) {
+            responsiveImage(imgixParams: {fit: crop, w: "1250", h: "1250", auto: format}) {
               sizes
               src
               width
@@ -286,7 +286,7 @@ query University {
           description
           link
           image {
-            responsiveImage(imgixParams: {fit: crop, auto: format}) {
+            responsiveImage(imgixParams: {fit: crop, w: "1250", h: "1250", auto: format}) {
               sizes
               src
               width
