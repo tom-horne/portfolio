@@ -15,17 +15,17 @@ const Footer: React.FC<FooterProps> = ({}) => {
             </Link>
           </li>
           <li>
-            <Link href="/About" className="text-white no-underline">
+            <Link href="/about" className="text-white no-underline">
               About
             </Link>
           </li>
           <li>
-            <Link href="/University" className="text-white no-underline">
+            <Link href="/university" className="text-white no-underline">
               University
             </Link>
           </li>
           <li>
-            <Link href="/Projects" className="text-white no-underline">
+            <Link href="/projects" className="text-white no-underline">
               Projects
             </Link>
           </li>
