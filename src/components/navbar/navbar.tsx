@@ -20,7 +20,7 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
       <nav className="flex justify-between items-center h-16 max-w-[960px] mx-auto">
         <div className="">
           <Link className="no-underline text-white" href="/">
-            <h3 className="p-1 bg-primary hover:bg-primaryhover rounded-md md:ml-0 ml-3">
+            <h3 className="px-1 bg-primary hover:bg-primaryhover rounded-md md:ml-0 ml-3">
               TH
             </h3>
           </Link>
@@ -29,24 +29,24 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
           <p className="pl-2 hidden md:flex text-black">{title}</p>
         </div>
 
-        <ul className="h-full hidden md:flex gap-x-6 list-none my-0 pl-0 md:box-border">
+        <ul className="h-full hidden md:flex gap-x-6 list-none my-0 pl-0">
           <Link
             className="no-underline text-black hover:text-blue-400 hover:border-b hover:border-0 hover:border-solid"
             href="/about"
           >
-            <li className="my-[50%]">About</li>
+            <li className="my-[40%]">About</li>
           </Link>
           <Link
             className="no-underline text-black hover:text-blue-400 hover:border-b hover:border-0 hover:border-solid"
             href="/university"
           >
-            <li className="my-[22.703px]">University</li>
+            <li className="my-[18.922px]">University</li>
           </Link>
           <Link
             className="no-underline text-black hover:text-blue-400 hover:border-b hover:border-0 hover:border-solid"
             href="/projects"
           >
-            <li className="my-[22.703px]">Projects</li>
+            <li className="my-[18.922px]">Projects</li>
           </Link>
         </ul>
 
