@@ -18,9 +18,9 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
   return (
     <header className="w-full bg-slate-50 border-0 border-b-[0.5px] border-solid border-slate-300 shadow-inner top-0 ease-in duration-300 fixed left-0 z-10">
       <nav className="flex justify-between items-center h-16 max-w-[960px] mx-auto">
-        <div className="flex justify-between">
+        <div className="">
           <Link className="no-underline text-white" href="/">
-            <h3 className="p-1 bg-primary hover:bg-primaryhover rounded-md">
+            <h3 className="p-1 bg-primary hover:bg-primaryhover rounded-md md:ml-0 ml-3">
               TH
             </h3>
           </Link>
@@ -29,46 +29,40 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
           <p className="pl-2 hidden md:flex text-black">{title}</p>
         </div>
 
-        <ul className="hidden md:flex gap-x-6 list-none my-0">
+        <ul className="h-full hidden md:flex gap-x-6 list-none my-0 pl-0 md:box-border">
           <Link
-            className="no-underline text-black hover:text-blue-400"
+            className="no-underline text-black hover:text-blue-400 hover:border-b hover:border-0 hover:border-solid"
             href="/about"
           >
-            <li className="h-16 hover:border-b hover:border-0 hover:border-solid active:border-b active:border-0 active:border-solid">
-              About
-            </li>
+            <li className="my-[50%]">About</li>
           </Link>
           <Link
-            className="no-underline text-black hover:text-blue-400"
+            className="no-underline text-black hover:text-blue-400 hover:border-b hover:border-0 hover:border-solid"
             href="/university"
           >
-            <li className="h-16 hover:border-b hover:border-0 hover:border-solid">
-              University
-            </li>
+            <li className="my-[22.703px]">University</li>
           </Link>
           <Link
-            className="no-underline text-black hover:text-blue-400"
+            className="no-underline text-black hover:text-blue-400 hover:border-b hover:border-0 hover:border-solid"
             href="/projects"
           >
-            <li className="h-16 hover:border-b hover:border-0 hover:border-solid">
-              Projects
-            </li>
+            <li className="my-[22.703px]">Projects</li>
           </Link>
         </ul>
 
         <div onClick={handleMenuIcon} className="flex md:hidden">
           {menuIcon ? (
-            <XMarkIcon className="h-6 w-6" />
+            <XMarkIcon className="h-6 w-6 mr-4" />
           ) : (
-            <EllipsisVerticalIcon className="h-6 w-6" />
+            <EllipsisVerticalIcon className="h-6 w-6 mr-4" />
           )}
         </div>
 
         <div
           className={
             menuIcon
-              ? "md:hidden absolute w-60 h-60 top-16 right-0 flex justify-center items-center bg-slate-100 ease-in duration-300 rounded-b-lg"
-              : "md:hidden absolute w-60 h-60 top-[-380%] right-0 flex justify-center items-center bg-slate-100 ease-in duration-300 rounded-b-lg"
+              ? "md:hidden absolute w-60 h-60 top-16 right-0 flex justify-center items-center bg-slate-50 ease-in duration-300 rounded-b-lg border-slate-300 border-l border-b border-0 border-solid"
+              : "md:hidden absolute w-60 h-60 top-[-380%] right-0 flex justify-center items-center bg-slate-50 ease-in duration-300 rounded-b-lg border-slate-300 border-b border-0 border-solid"
           }
         >
           <div className="mr-10 w-full">
