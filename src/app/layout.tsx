@@ -5,7 +5,7 @@ import NavBar from "../components/navbar";
 import Footer from "@/components/footer";
 import { Poppins } from "next/font/google";
 
-const inter = Poppins({ subsets: ["devanagari"], weight: ["200"] });
+const inter = Poppins({ subsets: ["devanagari"], weight: ["300"] });
 
 export const metadata: Metadata = {
   title: "Tom Horne Portfolio",
