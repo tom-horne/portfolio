@@ -4,7 +4,7 @@ import { PROJECTSPAGE_QUERY } from "@/graphql/queries";
 import BlockBuilder from "@/components/blockbuilder";
 
 export default async function Projects() {
-  const data = await getData({ query: PROJECTSPAGE_QUERY });
+  const data = await getData({ query: PROJECTSPAGE_QUERY, revalidate: 60 });
 
   return (
     <main className="w-full mt-16 ">

@@ -12,6 +12,7 @@ export default async function Project({
   const data = await getData({
     query: PROJECT_QUERY,
     variables: { slug: `projects/${slug}` },
+    revalidate: 60,
   });
 
   return (
