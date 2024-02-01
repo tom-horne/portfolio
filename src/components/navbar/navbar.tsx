@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { EllipsisVerticalIcon, XMarkIcon } from "@heroicons/react/20/solid";
+import { IoLogoGithub } from "react-icons/io";
 
 type NavBarProps = {
   title: string;
@@ -47,6 +48,11 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
             href="/projects"
           >
             <li className="my-[18.922px]">Projects</li>
+          </Link>
+          <Link href="https://github.com/tom-horne" target="_blank">
+            <li className="my-[50%]">
+              <IoLogoGithub size="30px" style={{ color: "black" }} />
+            </li>
           </Link>
         </ul>
 
