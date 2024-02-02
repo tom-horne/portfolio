@@ -8,8 +8,6 @@ type ButtonProps = {
 };
 
 const Button: React.FC<ButtonProps> = ({ title, colour, link }) => {
-  console.log("color", colour);
-
   return (
     <Link href={link} className="no-underline text-white">
       <button

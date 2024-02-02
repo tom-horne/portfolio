@@ -60,7 +60,28 @@ query Home {
         cards {
           title
           description
-          link
+          link {
+            ... on AboutRecord {
+              id
+              slug
+            }
+            ... on HomeRecord {
+              id
+              slug
+            }
+            ... on ProjectPageRecord {
+              id
+              slug
+            }
+            ... on ProjectRecord {
+              id
+              slug
+            }
+            ... on UniversityRecord {
+              id
+              slug
+            }
+          }
           image {
             responsiveImage(imgixParams: {fit: crop, auto: format}) {
               sizes
