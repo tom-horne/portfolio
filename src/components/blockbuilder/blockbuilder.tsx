@@ -5,6 +5,7 @@ import Banner from "../banner";
 import CardArea from "../cardarea";
 import Header from "../header";
 import Button from "../button";
+import BigCardArea from "../bigcardarea";
 
 type BlockBuilderProps = {
   content: any;
@@ -44,6 +45,8 @@ const BlockBuilder: React.FC<BlockBuilderProps> = ({ content }) => {
       //   );
       case "CardareaRecord":
         return <CardArea cards={component.cards} />;
+      case "BigcardareaRecord":
+        return <BigCardArea bigcards={component.bigcards} />;
       case "ButtonRecord":
         return (
           <Button
