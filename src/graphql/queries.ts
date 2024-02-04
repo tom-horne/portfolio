@@ -299,13 +299,30 @@ query University {
           }
         }
       }
-      ... on CardareaRecord {
+      ... on BigcardareaRecord {
         __typename
         id
-        cards {
+        bigcards {
           title
           description
-          link
+          link {
+            ... on ProjectRecord {
+              id
+              slug
+            }
+            ... on ProjectPageRecord {
+              id
+              slug
+            }
+            ... on HomeRecord {
+              id
+              slug
+            }
+            ... on AboutRecord {
+              id
+              slug
+            }
+          }
           image {
             responsiveImage(imgixParams: {fit: crop, w: "1250", h: "1250", auto: format}) {
               sizes
