@@ -322,6 +322,14 @@ query University {
               id
               slug
             }
+            ... on UniversityRecord {
+              id
+              slug
+            }
+            ... on UniversityYearRecord {
+              id
+              slug
+            }
           }
           image {
             responsiveImage(imgixParams: {fit: crop, w: "1250", h: "1250", auto: format}) {
@@ -332,6 +340,82 @@ query University {
               alt
               title
               base64
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
+
+export const UNIVERSITYYEAR_QUERY = `
+query UniversityYear($slug: String) {
+  universityYear(filter: {slug: {eq: $slug}}) {
+    title
+    slug
+    content {
+      ... on HeaderRecord {
+        __typename
+        id
+        title
+        subtitle
+      }
+      ... on TextRecord {
+        __typename
+        id
+        text
+      }
+      ... on BannerRecord {
+        __typename
+        id
+        title
+        description
+        image {
+          responsiveImage(imgixParams: {fit: crop, w: "500", h: "500", auto: format}) {
+            sizes
+            src
+            width
+            height
+            alt
+            title
+            base64
+          }
+        }
+      }
+      ... on BigcardareaRecord {
+        __typename
+        id
+        bigcards {
+          title
+          description
+          image {
+            responsiveImage(imgixParams: {fit: crop, auto: format}) {
+              sizes
+              src
+              width
+              height
+              alt
+              title
+              base64
+            }
+          }
+          link {
+            ... on ProjectRecord {
+              id
+              slug
+            }
+            ... on ProjectPageRecord {
+              id
+              slug
+            }
+            ... on HomeRecord {
+              id
+              slug
+            }
+            ... on AboutRecord {
+              id
+              slug
             }
           }
         }
