@@ -30,13 +30,15 @@ const Card: React.FC<CardProps> = ({ link, title, description, image }) => {
     // </div>
 
     <Link href={link ?? ""} className="no-underline">
-      <div className="h-96 rounded-md shadow-md">
-        <DatoImage
-          data={image.responsiveImage}
-          objectFit="cover"
-          className="rounded-t-md h-56"
-        />
-        <div className="px-6 py-4 ">
+      <div className="rounded-md shadow-md">
+        {image && (
+          <DatoImage
+            data={image.responsiveImage}
+            objectFit="cover"
+            className="rounded-t-md h-56"
+          />
+        )}
+        <div className="px-6 py-4 h-[168px]">
           <div className="font-bold text-xl mb-2">{title}</div>
           <p className="text-gray-700 text-sm line-clamp-4">{description}</p>
         </div>
