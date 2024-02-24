@@ -232,7 +232,7 @@ query Project($slug: String) {
         title
         description
         image {
-          responsiveImage(imgixParams: {fit: crop, w: "500", h: "500", auto: format}) {
+          responsiveImage(imgixParams: {fit: crop, w: "750", h: "500", auto: format}) {
             sizes
             src
             width
@@ -450,23 +450,27 @@ query About {
           colour {
             cssRgb
           }
-            link {
-              ... on ProjectRecord {
-                id
-                slug
-              }
-              ... on ProjectPageRecord {
-                id
-                slug
-              }
-              ... on HomeRecord {
-                id
-                slug
-              }
-              ... on AboutRecord {
-                id
-                slug
-              }
+          link {
+            ... on AboutRecord {
+              id
+              slug
+            }
+            ... on HomeRecord {
+              id
+              slug
+            }
+            ... on ProjectPageRecord {
+              id
+              slug
+            }
+            ... on ProjectRecord {
+              id
+              slug
+            }
+            ... on UniversityRecord {
+              id
+              slug
+            }
           }
         }
         image {
