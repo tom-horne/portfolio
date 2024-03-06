@@ -14,4 +14,42 @@ describe("<Banner />", () => {
 
     expect(screen.getByText("testDescription")).toBeInTheDocument();
   });
+
+  const buttons = [
+    {
+      id: 1,
+      title: "testButton",
+      link: {
+        id: "testId",
+        slug: "testSlug",
+      },
+
+      colour: "",
+    },
+  ];
+
+  it("renders a button in the banner", () => {
+    render(<Banner title={""} description={""} buttons={buttons} />);
+
+    expect(screen.getByText("testButton")).toBeInTheDocument();
+  });
+
+  it("links to the correct page", () => {
+    render(<Banner title={""} description={""} buttons={buttons} />);
+
+    expect(screen.getByRole("link")).toHaveAttribute("href", "testSlug");
+  });
+
+  // test("if there is an image", () => {
+  //   render(
+  //     <Banner
+  //       title={""}
+  //       description={""}
+  //       buttons={buttons}
+  //       image={"testimg.png"}
+  //     />
+  //   );
+
+  //   expect(screen.getAllByRole("img")).toHaveAttribute("src", "testimg.png");
+  // });
 });

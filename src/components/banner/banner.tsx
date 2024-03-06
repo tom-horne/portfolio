@@ -2,11 +2,18 @@ import React from "react";
 import { Image as DatoImage } from "react-datocms";
 import Button from "../button";
 
+type Button = {
+  id: number;
+  title: string;
+  colour: string;
+  link?: any;
+};
+
 type BannerProps = {
   title: string;
   description: string;
   image?: any;
-  buttons?: any;
+  buttons?: Button[];
 };
 
 const Banner: React.FC<BannerProps> = ({
