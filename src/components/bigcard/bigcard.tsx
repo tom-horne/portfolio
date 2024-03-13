@@ -17,12 +17,17 @@ const BigCard: React.FC<BigCardProps> = ({
 }) => {
   return (
     <Link href={link ?? ""} className="no-underline">
-      <div className="bg-white w-full h-[36rem] rounded-md shadow-md">
-        <DatoImage
-          data={image.responsiveImage}
-          objectFit="cover"
-          className="rounded-t-md h-96"
-        />
+      <div
+        data-testid="bigcard-component"
+        className="bg-white w-full h-[36rem] rounded-md shadow-md"
+      >
+        {image && (
+          <DatoImage
+            data={image.responsiveImage}
+            objectFit="cover"
+            className="rounded-t-md h-96"
+          />
+        )}
         <div className="p-4">
           <div className="font-bold text-xl mb-2">{title}</div>
           <p className="text-gray-700 text-sm line-clamp-4">{description}</p>

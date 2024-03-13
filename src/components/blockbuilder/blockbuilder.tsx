@@ -19,7 +19,7 @@ const BlockBuilder: React.FC<BlockBuilderProps> = ({ content }) => {
       case "TextRecord":
         return (
           <Text
-            title={component.title}
+            // title={component.title}
             text={component.text}
             image={component.image}
           />
