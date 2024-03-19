@@ -266,7 +266,8 @@ query Project($slug: String) {
     }
   }
 }
-`
+`;
+
 export const UNIVERSITY_QUERY = `
 query University {
   university {
@@ -347,7 +348,7 @@ query University {
     }
   }
 }
-`
+`;
 
 export const UNIVERSITYYEAR_QUERY = `
 query UniversityYear($slug: String) {
@@ -380,6 +381,26 @@ query UniversityYear($slug: String) {
             alt
             title
             base64
+          }
+        }
+      }
+      ... on CardareaRecord {
+        __typename
+        id
+        cards {
+          title
+          description
+          link
+          image {
+            responsiveImage(imgixParams: {fit: crop, auto: format}) {
+              sizes
+              src
+              width
+              height
+              alt
+              title
+              base64
+            }
           }
         }
       }
@@ -423,7 +444,7 @@ query UniversityYear($slug: String) {
     }
   }
 }
-`
+`;
 
 export const ABOUT_QUERY = `
 query About {
@@ -508,4 +529,4 @@ query About {
     }
   }
 }
-`
+`;

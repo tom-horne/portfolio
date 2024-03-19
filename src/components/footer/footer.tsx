@@ -30,11 +30,11 @@ const Footer: React.FC<FooterProps> = ({}) => {
               Projects
             </Link>
           </li>
-          <Link href="https://github.com/tom-horne" target="_blank">
-            <li className="mt-2">
+          <li className="mt-2">
+            <Link href="https://github.com/tom-horne" target="_blank">
               <IoLogoGithub size="30px" style={{ color: "white" }} />
-            </li>
-          </Link>
+            </Link>
+          </li>
         </ul>
       </div>
     </footer>

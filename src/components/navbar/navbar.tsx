@@ -30,7 +30,7 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
           <p className="pl-2 hidden md:flex text-black">{title}</p>
         </div>
 
-        <ul className="h-full hidden md:flex gap-x-6 list-none my-0 pl-0">
+        <ul className="h-full hidden md:flex gap-x-6 list-none my-0 pl-0 list-inside items-center">
           <Link
             className="no-underline text-black hover:text-blue-400 hover:border-b hover:border-0 hover:border-solid"
             href="/about"
@@ -50,7 +50,7 @@ const NavBar: React.FC<NavBarProps> = ({ title }) => {
             <li className="my-[18.922px]">Projects</li>
           </Link>
           <Link href="https://github.com/tom-horne" target="_blank">
-            <li className="my-[50%]">
+            <li>
               <IoLogoGithub size="30px" style={{ color: "black" }} />
             </li>
           </Link>
