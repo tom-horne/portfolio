@@ -19,18 +19,22 @@ const BigCard: React.FC<BigCardProps> = ({
     <Link href={link ?? ""} className="no-underline">
       <div
         data-testid="bigcard-component"
-        className="bg-white w-full h-[36rem] rounded-md shadow-md"
+        className="md:flex md:flex-row bg-white w-full md:h-[24rem] shadow-md"
       >
-        {image && (
-          <DatoImage
-            data={image.responsiveImage}
-            objectFit="cover"
-            className="rounded-t-md h-96"
-          />
-        )}
-        <div className="p-4">
+        <div className="p-4 border-solid md:border-r-0 md:rounded-l-md border-slate-200">
           <div className="font-bold text-xl mb-2">{title}</div>
-          <p className="text-gray-700 text-sm line-clamp-4">{description}</p>
+          <p className="text-gray-700 text-sm w-96 line-clamp-4">
+            {description}
+          </p>
+        </div>
+        <div>
+          {image && (
+            <DatoImage
+              data={image.responsiveImage}
+              objectFit="cover"
+              className="md:rounded-r-md h-96"
+            />
+          )}
         </div>
       </div>
     </Link>
