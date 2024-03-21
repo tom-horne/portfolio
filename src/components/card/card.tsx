@@ -30,7 +30,10 @@ const Card: React.FC<CardProps> = ({ link, title, description, image }) => {
     // </div>
 
     <Link href={link ?? ""} className="no-underline">
-      <div data-testid="card-component" className="rounded-md shadow-md">
+      <div
+        data-testid="card-component"
+        className="rounded-md shadow-md hover:bg-slate-50"
+      >
         {image && (
           <DatoImage
             data={image.responsiveImage}

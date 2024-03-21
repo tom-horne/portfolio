@@ -8,11 +8,13 @@ const Footer: React.FC<FooterProps> = ({}) => {
   return (
     <footer>
       <div className="bottom-0 h-80 text-center bg-slate-800">
-        <h1 className="text-white">Foota</h1>
-        <ul className="list-none pl-0 mx-auto box-border">
+        {/* <h1 className="text-white">Foota</h1> */}
+        <ul className="list-none pl-0 mx-auto box-border items-center">
           <li>
-            <Link href="/" className="text-white no-underline">
-              Home
+            <Link className="no-underline text-white" href="/">
+              <h3 className="px-1 bg-primary hover:bg-primaryhover rounded-md inline-block">
+                TH
+              </h3>
             </Link>
           </li>
           <li>
@@ -30,7 +32,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
               Projects
             </Link>
           </li>
-          <li className="mt-2">
+          <li className="mt-4">
             <Link href="https://github.com/tom-horne" target="_blank">
               <IoLogoGithub size="30px" style={{ color: "white" }} />
             </Link>
