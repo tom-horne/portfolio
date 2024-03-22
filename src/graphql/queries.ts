@@ -81,6 +81,10 @@ query Home {
               id
               slug
             }
+            ... on UniversityYearRecord {
+              id
+              slug
+            }
           }
           image {
             responsiveImage(imgixParams: {fit: crop, auto: format}) {
